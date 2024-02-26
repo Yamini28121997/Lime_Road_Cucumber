@@ -26,10 +26,10 @@ When User enters mobile number for otp verification
 And User clicks get otp option
 
 
-Scenario: Personal details updation and payment
+#Scenario: Personal details updation and payment
 
-Given User enters all personal details
-When User clicks confirm order for order placing
+#Given User enters all personal details
+#When User clicks confirm order for order placing
 
 
 

@@ -20,19 +20,21 @@ public class step_definition extends Base_Class {
 	}
 
 	@When("User clicks the women button")
-	public void user_clicks_the_women_button() {
+	public void user_clicks_the_women_button() throws InterruptedException {
+		Thread.sleep(5000);
 	    actionsclickMethod(hp.getElement());
 	}
 
 	@Given("To navigate to womencategory section")
-	public void to_navigate_to_womencategory_section() {
+	public void to_navigate_to_womencategory_section() throws InterruptedException {
+		Thread.sleep(10000);
 	    actionMovemethod(hp.getwomencategory());
 	}
 
 	@When("User select women jeanandjeggings options")
 	public void user_select_women_jeanandjeggings_options() throws InterruptedException {
-		Thread.sleep(2000);
-	   clickAnElement(hp.getjeans());
+		Thread.sleep(10000);
+		clickAnElement(hp.getjeans());
 	}
 	
 //	@When("apply filter to sort by trending")
@@ -43,8 +45,8 @@ public class step_definition extends Base_Class {
 	
 	@When("Select jean")
 	public void select_jean() throws InterruptedException {
-		Thread.sleep(2000);
-	    clickAnElement(hp.getJean());
+		Thread.sleep(60000);
+		clickAnElement(hp.getJean());
 	}
 
 //	@Given("User selects particular jean")
@@ -54,44 +56,39 @@ public class step_definition extends Base_Class {
 
 	@When("User select specific size")
 	public void user_select_specific_size() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 	    clickAnElement(hp.getsize());
 		
 	}
 
 	@When("Adding jean to cart value")
-	public void adding_jean_to_cart_value() {
+	public void adding_jean_to_cart_value() throws InterruptedException {
+		Thread.sleep(10000);
 	 clickAnElement(hp.getcart());
 	 
 	}
  
 	@Given("User clicks buy now for purchasing")
 	public void user_clicks_buy_now_for_purchasing() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		clickAnElement(hp.getbuy());
 	}
 
 	@When("User enters mobile number for otp verification")
 	public void user_enters_mobile_number_for_otp_verification() throws InterruptedException {
-		Thread.sleep(2000);
-		javscriptinput(hp.getmob(), "9019523648");
+		Thread.sleep(10000);
+		inputValue(hp.getmob(),"9019523648");
 		
 	}
 
 	@When("User clicks get otp option")
-	public void user_clicks_get_otp_option() {
+	public void user_clicks_get_otp_option() throws InterruptedException {
+		Thread.sleep(10000);
 	    clickAnElement(hp.getotp());
+	    Thread.sleep(30000);
 	}
 
-	@Given("User enters all personal details")
-	public void user_enters_all_personal_details() {
-	   
-	}
-
-	@When("User clicks confirm order for order placing")
-	public void user_clicks_confirm_order_for_order_placing() {
-	    
-	}
+	
 
 
 
